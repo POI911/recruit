@@ -3,7 +3,7 @@
         color: #1d80e1;
     }
 </style>
-<div class="card">
+{{-- <div class="card">
     <div class="card-header bg-secondary">
 
         {{__('messages.installationWelcome')}}
@@ -115,4 +115,4 @@
 
         </div>
     </div>
-</div>
+</div> --}}

@@ -77,12 +77,12 @@
 <nav class="topbar topbar-inverse topbar-expand-md">
     <div class="container">
 
-        <div class="topbar-left">
+        {{-- <div class="topbar-left">
             <button class="topbar-toggler">&#9776;</button>
             <a class="topbar-brand" href="{{ url('/') }}">
                 <img src="{{ $global->logo_url }}" class="logo-inverse" alt="home" />
             </a>
-        </div>
+        </div> --}}
         
             
 
@@ -105,7 +105,7 @@
             </div>
         </div>
         @endif
- @if($global->job_alert_status == 1)
+ {{-- @if($global->job_alert_status == 1)
     @if( isset($alertId) && !is_null($alertId))
         <div class="topbar-left">
                
@@ -118,7 +118,7 @@
                </div>
     
     @endif
-    @endif
+    @endif --}}
     {{-- <div class="topbar-right">
            
         </div> --}}
@@ -178,7 +178,7 @@
 <!-- END Main container -->
 
 <!-- Footer -->
-<footer class="site-footer">
+{{-- <footer class="site-footer">
     <div class="container">
         <div class="row text-center">
             <div class="col-12 col-lg-12 mb-10">
@@ -194,7 +194,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> --}}
 <!-- END Footer -->
 
 

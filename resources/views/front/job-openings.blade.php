@@ -1,9 +1,9 @@
 @extends('layouts.front')
 
 @section('header-text')
-    <h1 class="hidden-sm-down text-white fs-50 mb-30">@if(!is_null($frontTheme->welcome_title)) {{ $frontTheme->welcome_title }} @else @lang('modules.front.homeHeader')@endif </h1>
-    <h4 class="hidden-sm-up text-white mb-30"> @if(!is_null($frontTheme->welcome_title)) {{ $frontTheme->welcome_title }} @else @lang('modules.front.homeHeader')@endif </h4>
-    <p class="text-white mb-40">@if(!is_null($frontTheme->welcome_sub_title)) {!! $frontTheme->welcome_sub_title !!}  @else @lang('modules.front.jobOpeningText') @endif</p>
+    <h1 class="hidden-sm-down text-white fs-50 mb-30">مئات الوظائف بإنتظارك</h1>
+    {{-- <h4 class="hidden-sm-up text-white mb-30"> @if(!is_null($frontTheme->welcome_title)) {{ $frontTheme->welcome_title }} @else @lang('modules.front.homeHeader')@endif </h4>
+    <p class="text-white mb-40">@if(!is_null($frontTheme->welcome_sub_title)) {!! $frontTheme->welcome_sub_title !!}  @else @lang('modules.front.jobOpeningText') @endif</p> --}}
     <div class="location-search d-flex rounded-pill bg-white ">
 
         <div class="align-items-center d-flex rounded-pill location height-50">
