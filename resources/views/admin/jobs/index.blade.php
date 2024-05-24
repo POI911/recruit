@@ -97,18 +97,18 @@
                 <div class="row clearfix">
                     <div class="col-md-12 mb-20">
                         @if(in_array("view_question", $userPermissions))
-                        <a href="{{ route('admin.questions.index') }}">
+                        {{-- <a href="{{ route('admin.questions.index') }}">
                             <button class="btn btn-sm btn-primary" type="button">
                                 <i class="fa fa-plus-circle"></i> @lang('menu.customQuestion')
                             </button>
-                        </a>
+                        </a> --}}
                         @endif
                         @if(in_array("view_question", $userPermissions))
-                        <a href="{{ route('admin.jobs.sendEmail') }}">
+                        {{-- <a href="{{ route('admin.jobs.sendEmail') }}">
                             <button class="btn btn-sm btn-success" type="button">
                                 <i class="fa fa-envelope-o"></i> @lang('menu.sendJobEmails')
                             </button>
-                        </a>
+                        </a> --}}
                         @endif
                     </div>
                 </div>

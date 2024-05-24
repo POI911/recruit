@@ -22,7 +22,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div class="checkbox icheck">
+                {{-- <div class="checkbox icheck">
                     <label>
                         <div class="icheckbox_flat-green" aria-checked="false" aria-disabled="false" style="position: relative;">
                             <input  type="checkbox" {{ old('remember') ? 'checked' : '' }}  name="remember_me" id="remember_me" class="flat-red"  style="position: absolute; opacity: 0;">
@@ -30,7 +30,7 @@
                         </div>
                         {{  __('Remember Me') }}
                     </label>
-                </div>
+                </div> --}}
             </div>
             <!-- /.col -->
             <div class="col-sm-12 mt-4">
@@ -39,9 +39,9 @@
             <!-- /.col -->
         </div>
 
-        <p class="mb-1 mt-4">
+        {{-- <p class="mb-1 mt-4">
             <a href="#" id="to-recover">I forgot my password</a>
-        </p>
+        </p> --}}
     </form>
 
     <form class="form-horizontal" method="post" id="recoverform" style="display: none"

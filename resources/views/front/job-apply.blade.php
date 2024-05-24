@@ -44,8 +44,7 @@
     @php
         $gender = [
             'male' => __('modules.front.male'),
-            'female' => __('modules.front.female'),
-            'others' => __('modules.front.others')
+            'female' => __('modules.front.female')
         ];
     @endphp
 
@@ -131,7 +130,7 @@
                                 <input class="form-control form-control-lg" type="text" name="city" id="cityId" placeholder="@lang('modules.front.selectCity')">
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="d-none col-md-4">
                             <div class="form-group">
                                 <input class="form-control form-control-lg" type="number" name="zip_code" id="zipCode" placeholder="@lang('modules.front.zipCode')">
                             </div>
@@ -139,7 +138,7 @@
                     </div>
                 @endif
                 @if($job->section_visibility['profile_image'] == 'yes')
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <h6>@lang('modules.front.photo')</h6>
                         <img src="@if($user) {{ $user->avatar }} @endif">
                         <input type="hidden" name="linkedinPhoto" value="@if($user) {{ $user->avatar }} @endif">
@@ -148,7 +147,7 @@
                         @endif
                          <input class="select-file" accept=".png,.jpg,.jpeg" type="file" name="photo"><br>
                         
-                    </div>
+                    </div> --}}
                 @endif
             </div>
 
@@ -196,7 +195,7 @@
                 </div>
             @endif
 
-            @if ($job->section_visibility['terms_and_conditions'] == 'yes')
+            {{-- @if ($job->section_visibility['terms_and_conditions'] == 'yes')
                 <div class="col-md-4 px-20 pb-30 bt-1">
                     <h5 class="required">@lang('modules.front.legalTerm')</h5>
                 </div>
@@ -213,7 +212,7 @@
                         </div>
                     </div>
                 </div>
-            @endif
+            @endif --}}
             <div class="col-md-12 pb-30">
                 <div class="row">
                     <div class="col-md-8 offset-md-4 margin-left">

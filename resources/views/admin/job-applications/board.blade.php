@@ -76,14 +76,14 @@
             <a href="{{ route('admin.job-applications.table') }}" class="btn btn-sm btn-primary">
                 <i class="fa fa-table"></i> @lang('app.tableView')
             </a>
-            <a href="#" class="btn btn-sm btn-info mail_setting">
+            {{-- <a href="#" class="btn btn-sm btn-info mail_setting">
                 <i class="fa fa-envelope-o"></i>
                 @lang('modules.applicationSetting.mailSettings')
-            </a>
-            <a href="javascript:createApplicationStatus();" class="btn btn-sm btn-success">
+            </a> --}}
+            {{-- <a href="javascript:createApplicationStatus();" class="btn btn-sm btn-success">
                 <i class="fa fa-bookmark-o"></i>
                 @lang('modules.jobApplication.newStatus')
-            </a>
+            </a> --}}
         </div>
         <div class="col-sm-6">
             <div id="search-container" class="form-group pull-right">
@@ -138,7 +138,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="d-none">
                         <div class="form-group">
                             <select class="select2" name="skill[]" data-placeholder="Select Skills" multiple="multiple" id="skill" data-style="form-control">
                                 @forelse($skills as $skill)
@@ -148,7 +148,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="d-none">
                         <div class="form-group">
                             <select class="select2" name="question"  id="questions" data-style="form-control">
                                 <option value="all">@lang('modules.jobApplication.allQuestion')</option>

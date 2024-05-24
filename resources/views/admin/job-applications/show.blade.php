@@ -43,10 +43,10 @@
                 </div>
             @endif
             @if($application->status->status == 'hired' && is_null($application->onboard))
-                <p class="text-muted resume-button">
+                {{-- <p class="text-muted resume-button">
                     <a href="{{ route('admin.job-onboard.create') }}?id={{$application->id}}"
                        class="btn btn-sm btn-success">@lang('app.startOnboard')</a>
-                </p>
+                </p> --}}
            @endif
            @if ($user->cans('delete_job_applications'))
                 <div class="text-muted resume-button">
@@ -226,7 +226,7 @@
             </div>
         </div>
         @if ($user->cans('edit_job_applications'))
-            <div class="col-12" id="skills-container">
+            <div class="d-none col-12" id="skills-container">
                 <hr>
                 <div class="col-sm-12 mb-3">
                     <h5>@lang('modules.jobApplication.skills')</h5>

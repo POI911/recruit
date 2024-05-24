@@ -26,12 +26,12 @@ class AdminReportController extends AdminBaseController
          $this->jobApplication = JobApplication::count();
          $this->job = Job::count();
          $this->candidatesHired = JobApplication::where('status_id', 4)->count();
-         $this->interviewScheduled = JobApplication::where('status_id', 3)->count();
+        // $this->interviewScheduled = JobApplication::where('status_id', 3)->count();
          $data = [];
          $data['JobApplication'] = $this->jobApplication;
          $data['JobPosted'] = $this->job;
          $data['CandidatesHired'] = $this->candidatesHired;
-         $data['InterviewScheduled'] = $this->interviewScheduled;
+        // $data['InterviewScheduled'] = $this->interviewScheduled;
          $data1['chart_data'] = json_encode($data);
             
         return view('admin.report.index' ,$this->data,$data1);

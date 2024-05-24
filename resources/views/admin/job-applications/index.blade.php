@@ -38,10 +38,10 @@
                             <a href="{{ route('admin.job-applications.index') }}" class="btn btn-outline btn-primary btn-sm">
                                 <i class="fa fa-columns"></i> @lang('modules.jobApplication.boardView')
                             </a>
-                            <a href="#" class="btn btn-sm btn-info mail_setting">
+                            {{-- <a href="#" class="btn btn-sm btn-info mail_setting">
                                 <i class="fa fa-envelope-o"></i>
                                 @lang('modules.applicationSetting.mailSettings')
-                            </a>
+                            </a> --}}
                             <a class="pull-right" onclick="exportJobApplication()" ><button class="btn btn-sm btn-primary" type="button">
                                     <i class="fa fa-upload"></i>  @lang('menu.export')
                                 </button></a>
@@ -97,7 +97,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-8">
+                                <div class="d-none">
                                     <div class="form-group">
                                         <select class="select2" name="skill[]" data-placeholder="Select Skills" multiple="multiple" id="skill" data-style="form-control">
                                             @forelse($skills as $skill)
@@ -107,7 +107,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="d-none">
                                     <div class="form-group">
                                         <select class="select2" name="question"  id="questions" data-style="form-control">
                                             <option value="all">@lang('modules.jobApplication.allQuestion')</option>

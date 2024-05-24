@@ -11,10 +11,10 @@
 @section('content')
     @php
     $required_columns = [
-        'gender' => false,
-        'dob' => false,
-        'country' => false,
-        'address' => false,
+        'gender' => true,
+        'dob' => true,
+        'country' => true,
+        'address' => true,
     ];
     $requiredColumns = [
         'gender' => __('modules.front.gender'),
@@ -145,7 +145,7 @@
 
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="d-none col-md-6">
 
                                     <div class="form-group">
                                         <label>@lang('menu.skills')</label>
@@ -216,8 +216,8 @@
                                         <label for="address" class="required">@lang('modules.jobs.jobType')</label>
                                         <a href="javascript:;" title="@lang('app.add') @lang('modules.jobs.jobType')" id="addJobType"
                                             class="btn btn-sm btn-info btn-outline"><i class="fa fa-plus"></i></a>
-                                            <label class="mr-4 ml-2 ">
-                                                <div class="icheckbox_flat-green" aria-checked="false"
+                                            <label class="d-none mr-4 ml-2 ">
+                                                <div class=" icheckbox_flat-green" aria-checked="false"
                                                     aria-disabled="false" style="position: relative;">
                                                     <input @if ($job && $job->show_job_type) checked @endif type="checkbox" value="yes" name="show_job_type"
                                                         class="flat-red"
@@ -242,7 +242,7 @@
                                         <a href="javascript:;" title="@lang('app.add') @lang('modules.jobs.workExperience')"
                                             id="addWorkExperience" class="btn btn-sm btn-info btn-outline"><i
                                                 class="fa fa-plus"></i></a>
-                                                <label class="mr-4 ml-2 ">
+                                                <label class="d-none mr-4 ml-2 ">
                                                     <div class="icheckbox_flat-green" aria-checked="false"
                                                         aria-disabled="false" style="position: relative;">
                                                         <input @if ($job && $job->show_work_experience) checked @endif  type="checkbox" value="yes" name="show_work_experience"
@@ -280,9 +280,9 @@
                                             data-live-search="true">
                                             <option value="">--</option>
                                             <option @if ($job && $job->pay_type == 'Range') selected @endif value="Range">@lang('modules.jobs.range')</option>
-                                            <option @if ($job && $job->pay_type == 'Starting') selected @endif  value="Starting">@lang('modules.jobs.startingSalary')</option>
+                                            {{-- <option @if ($job && $job->pay_type == 'Starting') selected @endif  value="Starting">@lang('modules.jobs.startingSalary')</option>
                                             <option @if ($job && $job->pay_type == 'Maximum') selected @endif  value="Maximum">@lang('modules.jobs.maximumSalary')</option>
-                                            <option @if ($job && $job->pay_type == 'Exact Amount') selected @endif  value="Exact Amount">@lang('modules.jobs.exactSalary')</option>
+                                            <option @if ($job && $job->pay_type == 'Exact Amount') selected @endif  value="Exact Amount">@lang('modules.jobs.exactSalary')</option> --}}
                                         </select>
 
                                     </div>
@@ -320,7 +320,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="d-none col-md-12">
                                     <div class="form-group">
                                         <label for="meta-title">@lang('modules.jobs.metaTitle')</label>
                                         <input type="text" id="meta-title" class="form-control" name="meta_title"
@@ -328,7 +328,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="d-none col-md-12">
                                     <div class="form-group">
                                         <label for="meta-description">@lang('modules.jobs.metaDescription')</label>
                                         <textarea id="meta-description" class="form-control" name="meta_description"
@@ -362,7 +362,7 @@
                                     @endforelse
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="d-none col-md-12">
                                     <div id="columns">
                                         <label>@lang('app.askApplicantsFor')</label>
                                         <div class="form-group form-group-inline">
@@ -401,7 +401,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="d-none col-md-12">
                                     <div id="columns">
                                         <label>@lang('modules.jobs.sectionVisibility')</label>
                                         <div class="form-group form-group-inline">
@@ -578,12 +578,12 @@
                         
                         $('#start_amt label').html("{{ __('modules.jobs.startingSalary') }}");
                         break;
-                    case 'Maximum':
-                        $('#start_amt label').html("{{ __('modules.jobs.maximumSalary') }}");
-                        break;
-                    case 'Exact Amount':
-                        $('#start_amt label').html("{{ __('modules.jobs.exactSalary') }}");
-                        break;
+                    // case 'Maximum':
+                    //     $('#start_amt label').html("{{ __('modules.jobs.maximumSalary') }}");
+                    //     break;
+                    // case 'Exact Amount':
+                    //     $('#start_amt label').html("{{ __('modules.jobs.exactSalary') }}");
+                    //     break;
                 }
             @elseif(!is_null($job) && $job->pay_type == 'Range')
             $('#start_amt label').html("{{ __('modules.jobs.startingSalary') }}");
@@ -603,12 +603,12 @@
                         
                         $('#start_amt label').html("{{ __('modules.jobs.startingSalary') }}");
                         break;
-                    case 'Maximum':
-                        $('#start_amt label').html("{{ __('modules.jobs.maximumSalary') }}");
-                        break;
-                    case 'Exact Amount':
-                        $('#start_amt label').html("{{ __('modules.jobs.exactSalary') }}");
-                        break;
+                    // case 'Maximum':
+                    //     $('#start_amt label').html("{{ __('modules.jobs.maximumSalary') }}");
+                    //     break;
+                    // case 'Exact Amount':
+                    //     $('#start_amt label').html("{{ __('modules.jobs.exactSalary') }}");
+                    //     break;
                 }
             } else {
                 $('#start_amt label').html("{{ __('modules.jobs.startingSalary') }}");

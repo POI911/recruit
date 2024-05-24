@@ -89,30 +89,30 @@ class AdminJobsController extends AdminBaseController
         abort_if(!$this->user->cans('add_jobs'), 403);
 
         $required_columns = [
-            'gender' => false,
-            'dob' => false,
+            'gender' => true,
+            'dob' => true,
             'country' => false,
-            'address' => false
+            'address' => true
         ];
 
-        foreach ($required_columns as $key => $value) {
-            if ($request->has($key)) {
-                $required_columns[$key] = true;
-            }
-        }
+        // foreach ($required_columns as $key => $value) {
+        //     if ($request->has($key)) {
+        //         $required_columns[$key] = true;
+        //     }
+        // }
 
         $section_visibility = [
             'profile_image' => 'no',
-            'resume' => 'no',
-            'cover_letter' => 'no',
+            'resume' => 'yes',
+            'cover_letter' => 'yes',
             'terms_and_conditions' => 'no'
         ];
 
-        foreach ($section_visibility as $key => $value) {
-            if ($request->has($key)) {
-                $section_visibility[$key] = 'yes';
-            }
-        }
+        // foreach ($section_visibility as $key => $value) {
+        //     if ($request->has($key)) {
+        //         $section_visibility[$key] = 'yes';
+        //     }
+        // }
 
         $job = new Job();
         $job->slug = null;
@@ -139,13 +139,13 @@ class AdminJobsController extends AdminBaseController
             'description' => $request->meta_description ?: strip_tags(Str::substr(html_entity_decode($request->job_description), 0, 150))
         ];
 
-        if ($request->show_job_type == 'yes') {
+        // if ($request->show_job_type == 'yes') {
             $job->show_job_type = true;
-        }
+        // }
 
-        if ($request->show_work_experience == 'yes') {
+        // if ($request->show_work_experience == 'yes') {
             $job->show_work_experience = true;
-        }
+        // }
 
         if ($request->show_salary == 'yes') {
             $job->show_salary = true;
@@ -166,7 +166,7 @@ class AdminJobsController extends AdminBaseController
 
         // Save Question for job
         $job->questions()->sync($request->question);
-        event(new JobAlertEvent($job));
+        // event(new JobAlertEvent($job));
 
         return Reply::redirect(route('admin.jobs.index'), __('menu.jobs') . ' ' . __('messages.createdSuccessfully'));
     }

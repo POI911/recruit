@@ -54,18 +54,18 @@
 <body class="hold-transition login-page" style="background-image:url({{ asset('assets/images/background/auth.jpg') }})">
 
 <div class="login-box" >
-    <div class="login-logo" style="padding: 10px 0; background: var(--main-color);">
+    {{-- <div class="login-logo" style="padding: 10px 0; background: var(--main-color);">
         <a href="#" >
             <img src="{{ $setting->logo_url }}" style="max-height: 40px" alt="">
         </a>
-    </div>
+    </div> --}}
     <!-- /.login-logo -->
     <div class="card">
         <div class="card-body login-card-body">
 
             @yield('content')
             <div class="form-actions  pt-3">
-                <a href="{{route('jobs.jobOpenings')}}" class="btn btn-sm btn-block btn-rounded btn-outline-success text-uppercase">{{__('messages.VisitJobOpening')}}</a>
+                <a href="{{route('jobs.jobOpenings')}}" class="btn btn-sm btn-block btn-rounded btn-outline-success text-uppercase">Go to Frontpage</a>
             </div>
         </div>
         <!-- /.login-card-body -->

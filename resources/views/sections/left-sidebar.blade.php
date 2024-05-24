@@ -1,11 +1,11 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary">
     <!-- Brand Logo -->
-    <a href="{{ route('admin.dashboard') }}" class="brand-link">
+    {{-- <a href="{{ route('admin.dashboard') }}" class="brand-link">
         <img src="{{ $global->logo_url }}"
              alt="AdminLTE Logo"
              class="brand-image img-fluid">
-    </a>
+    </a> --}}
 
     <!-- Sidebar -->
     <div class="sidebar">
@@ -36,14 +36,14 @@
                 @endif
 
                 @if(in_array("view_skills", $userPermissions))
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{ route('admin.skills.index') }}" class="nav-link {{ request()->is('admin/skills*') ? 'active' : '' }}">
                         <i class="nav-icon icon-grid"></i>
                         <p>
                             @lang('menu.skills')
                         </p>
                     </a>
-                </li>
+                </li> --}}
                 @endif
 
                 @if(in_array("view_company", $userPermissions))
@@ -96,47 +96,47 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{ route('admin.job-onboard.index') }}" class="nav-link {{ request()->is('admin/job-onboard*') ? 'active' : '' }}">
                         <i class="nav-icon icon-user"></i>
                         <p>
                             @lang('menu.jobOnboard')
                         </p>
                     </a>
-                </li>
+                </li> --}}
                 @endif
 
                 @if(in_array("view_schedule", $userPermissions))
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{ route('admin.interview-schedule.index') }}" class="nav-link {{ request()->is('admin/interview-schedule*') ? 'active' : '' }}">
                         <i class="nav-icon icon-calendar"></i>
                         <p>
                             @lang('menu.interviewSchedule')
                         </p>
                     </a>
-                </li>
+                </li> --}}
                 @endif
 
                 @if(in_array("view_team", $userPermissions))
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{ route('admin.team.index') }}" class="nav-link {{ request()->is('admin/team*') ? 'active' : '' }}">
                         <i class="nav-icon icon-people"></i>
                         <p>
                             @lang('menu.team')
                         </p>
                     </a>
-                </li>
+                </li> --}}
                 @endif
 
                 @if ($user->roles->count() > 0)
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a href="{{ route('admin.todo-items.index') }}" class="nav-link {{ request()->is('admin/todo-items*') ? 'active' : '' }}">
                             <i class="nav-icon icon-notebook"></i>
                             <p>
                                 @lang('menu.todoList')
                             </p>
                         </a>
-                    </li>
+                    </li> --}}
                 @endif
 
                 <li class="nav-item">
@@ -185,60 +185,60 @@
                                 <p>@lang('menu.applicationFormSettings')</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{route('admin.currency-settings.index')}}" class="nav-link {{ request()->is('admin/settings/currency-settings') ? 'active' : '' }}">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>@lang('menu.currencySetting')</p>
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </li> --}}
+                        {{-- <li class="nav-item">
                             <a href="{{ route('admin.role-permission.index') }}" class="nav-link {{ request()->is('admin/settings/role-permission') ? 'active' : '' }}">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>@lang('menu.rolesPermission')</p>
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </li> --}}
+                        {{-- <li class="nav-item">
                             <a href="{{ route('admin.language-settings.index') }}" class="nav-link {{ request()->is('admin/settings/language-settings') ? 'active' : '' }}">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>@lang('app.language') @lang('menu.settings')</p>
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </li> --}}
+                        {{-- <li class="nav-item">
                             <a href="{{ route('admin.footer-settings.index') }}" class="nav-link {{ request()->is('admin/settings/footer-settings') ? 'active' : '' }}">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>@lang('menu.footerSettings')</p>
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </li> --}}
+                        {{-- <li class="nav-item">
                             <a href="{{ route('admin.theme-settings.index') }}" class="nav-link {{ request()->is('admin/settings/theme-settings') ? 'active' : '' }}">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>@lang('menu.themeSettings')</p>
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </li> --}}
+                        {{-- <li class="nav-item">
                             <a href="{{ route('admin.smtp-settings.index') }}" class="nav-link {{ request()->is('admin/settings/smtp-settings') ? 'active' : '' }}">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>@lang('menu.mailSetting')</p>
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </li> --}}
+                        {{-- <li class="nav-item">
                             <a href="{{ route('admin.sms-settings.index') }}" class="nav-link {{ request()->is('admin/settings/sms-settings') ? 'active' : '' }}">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>@lang('menu.smsSettings')</p>
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </li> --}}
+                        {{-- <li class="nav-item">
                             <a href="{{ route('admin.storage-settings.index') }}" class="nav-link">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>@lang('menu.storageSetting')</p>
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </li> --}}
+                        {{-- <li class="nav-item">
                             <a href="{{ route('admin.linkedin-settings.index') }}" class="nav-link">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>@lang('menu.linkedInSettings')</p>
                             </a>
-                        </li>
+                        </li> --}}
                         @if($global->system_update == 1)
                         <li class="nav-item">
                             <a href="{{ route('admin.update-application.index') }}" class="nav-link {{ request()->is('admin/settings/update-application') ? 'active' : '' }}">
@@ -247,19 +247,19 @@
                             </a>
                         </li>
                         @endif
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a href="{{ route('admin.zoom-setting.index') }}" class="nav-link">
                                     <i class="fa fa-circle-o nav-icon"></i>
 
                                     <p> @lang('menu.zoomSetting')</p>
                                 </a>
-                            </li>
-                        <li class="nav-item">
+                            </li> --}}
+                        {{-- <li class="nav-item">
                             <a href="https://froiden.freshdesk.com/support/solutions/" class="nav-link" target="_blank">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>@lang('menu.help')</p>
                             </a>
-                        </li>
+                        </li> --}}
 
                         @endif
 

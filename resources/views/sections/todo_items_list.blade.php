@@ -1,13 +1,13 @@
-<div class="d-flex justify-content-between align-items-center mb-3">
+{{-- <div class="d-flex justify-content-between align-items-center mb-3">
     <h3 class="card-title">
         @lang('modules.module.todos.todoList')
     </h3>
     <a href="{{ route('admin.todo-items.index') }}" class="btn btn-sm btn-custom">
         @lang('modules.module.todos.viewAll')
     </a>
-</div>
+</div> --}}
 
-<div id="upper-box" class="todo-box mb-3">
+{{-- <div id="upper-box" class="todo-box mb-3">
     <div class="todo-title">
         <h5>@lang('modules.module.todos.pendingTasks')</h5>
         <a href="javascript:showNewTodoForm();" class="btn btn-sm btn-add"><i class="fa fa-plus"></i></a>
@@ -69,5 +69,5 @@
             </li>
         @endforelse
     </ul>
-</div>
+</div> --}}
 

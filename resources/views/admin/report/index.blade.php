@@ -52,7 +52,7 @@
         </div>
         <!-- /.info-box -->
     </div>
-    <div class="col-md-3 col-sm-6 col-12">
+    {{-- <div class="col-md-3 col-sm-6 col-12">
         <div class="info-box">
             <span class="info-box-icon" style="background-color: #3D8EE8;"><i class="icon-badge badge-color"></i></span>
 
@@ -63,7 +63,7 @@
             <!-- /.info-box-content -->
         </div>
         <!-- /.info-box -->
-    </div>
+    </div> --}}
 </div>
 <div class="row">
     <div class="col-md-3">

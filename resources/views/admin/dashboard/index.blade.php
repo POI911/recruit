@@ -13,7 +13,7 @@
     {{-- @if($global->system_update == 1)
         @php($updateVersionInfo = \Froiden\Envato\Functions\EnvatoUpdate::updateVersionInfo())
         @if(isset($updateVersionInfo['lastVersion'])) --}}
-            <div class="row alert alert-info">
+            {{-- <div class="row alert alert-info">
 
                 <div class="col-md-10">
                     <i class="ti-gift"></i> @lang('modules.update.newUpdate')
@@ -25,7 +25,7 @@
                         <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
-            </div>
+            </div> --}}
          {{-- @endif
     @endif  --}}
     @if (!$user->mobile_verified && $smsSettings->nexmo_status == 'active')
@@ -180,7 +180,7 @@
                     @endif
                 </div>
                 <!-- Column -->
-                <div class="col-md-6">
+                {{-- <div class="col-md-6">
                     @if($user->cans('view_job_applications'))
 
                     <a href="{{ route('admin.job-applications.index') }}" target="_blank">
@@ -199,9 +199,9 @@
                         </div>
                     </div>
                     @endif
-                </div>
+                </div> --}}
                 <!-- Column -->
-                <div class="col-md-6">
+                {{-- <div class="col-md-6">
                     @if($user->cans('view_schedule'))
                     <a href="{{ route('admin.interview-schedule.index') }}" target="_blank">
                         <div class="card">
@@ -212,14 +212,14 @@
                         </div>
                     </a>
                     @else
-                    <div class="card">
+                    {{-- <div class="card">
                         <div class="box bg-primary text-center rounded">
                             <h1 class="font-light text-white">{{ $totalTodayInterview }}</h1>
                             <h6 class="text-white">@lang('modules.dashboard.todayInterview')</h6>
                         </div>
-                    </div>
+                    </div> 
                     @endif
-                </div>
+                </div> --}}
             </div>
         </div>
         @if ($user->roles->count() > 0)

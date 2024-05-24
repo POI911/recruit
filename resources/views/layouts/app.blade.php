@@ -221,7 +221,7 @@
     </div>
     <!-- /.content-wrapper -->
         {{--Footer sticky notes--}}
-        <div id="footer-sticky-notes" class="row hidden-xs hidden-sm rounded">
+        {{-- <div id="footer-sticky-notes" class="row hidden-xs hidden-sm rounded">
             <div class="col-md-12" id="sticky-note-header">
                 <div class="row">
                     <div class="col-md-10" style="line-height: 30px">
@@ -239,10 +239,10 @@
 
             </div>
 
-            <div id="sticky-note-list" style="display: none; width: 100%">
+            {{-- <div id="sticky-note-list" style="display: none; width: 100%">
                 @include('admin.sticky-note.note-ajax', ['stickyNotes' => $stickyNotes]);
-            </div>
-        </div>
+            </div> 
+        </div> --}}
         {{--sticky note end--}}
         {{--sticky note modal--}}
         <div id="responsive-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -300,7 +300,7 @@
 
 
     <footer class="main-footer">
-        &copy; {{ \Carbon\Carbon::today()->year }} @lang('app.by') {{ $companyName }}
+        {{-- &copy; {{ \Carbon\Carbon::today()->year }} @lang('app.by') {{ $companyName }} --}}
     </footer>
 
     @include('sections.right-sidebar')
