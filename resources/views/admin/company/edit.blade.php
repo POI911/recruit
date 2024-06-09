@@ -45,21 +45,21 @@
                     </div>
 
 
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="address">@lang('app.status')</label>
                         <select name="status" id="status" class="form-control">
                                 <option @if($company->status == 'active') selected @endif>Active</option>
                                 <option @if($company->status == 'inactive') selected @endif>Inactive</option>
                             </select>
-                    </div>
+                    </div> --}}
 
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="address">@lang('modules.company.showFrontend')</label>
                         <select name="show_in_frontend" id="show_in_frontend" class="form-control">
                                             <option @if($company->show_in_frontend == 'true') selected @endif value="true">@lang('app.yes')</option>
                                             <option @if($company->show_in_frontend == 'false') selected @endif value="false">@lang('app.no')</option>
                                         </select>
-                    </div>
+                    </div> --}}
 
                     <button type="button" id="save-form" class="btn btn-success waves-effect waves-light m-r-10">
                             @lang('app.save')

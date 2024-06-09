@@ -44,13 +44,13 @@
                         <textarea class="form-control" id="address" rows="5" name="address"></textarea>
                     </div>
 
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="address" >@lang('modules.company.showFrontend')</label>
                         <select name="show_in_frontend" id="show_in_frontend" class="form-control">
                                     <option value="true">@lang('app.yes')</option>
                                     <option value="false">@lang('app.no')</option>
                                 </select>
-                    </div>
+                    </div> --}}
 
                     <button type="button" id="save-form" class="btn btn-success waves-effect waves-light m-r-10">
                             @lang('app.save')

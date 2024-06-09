@@ -26,7 +26,7 @@
     </a>
         <!-- /.info-box -->
     </div>
-    <div class="col-md-3 col-sm-6 col-12">
+    {{-- <div class="col-md-3 col-sm-6 col-12">
         <a  href="javascript:;"  class="changeSatus" data-status="active">
         <div class="info-box">
             <span class="info-box-icon bg-success" ><i class="icon-badge"></i></span>
@@ -52,7 +52,7 @@
         </div>
     </a>
         <!-- /.info-box -->
-    </div>
+    </div> --}}
 </div>
 <div class="row">
 
@@ -67,7 +67,7 @@
                                 <th>@lang('modules.accountSettings.companyLogo')</th>
                                 <th>@lang('menu.companies')</th>
                                 <th>@lang('modules.accountSettings.companyEmail')</th>
-                                <th>@lang('app.status')</th>
+                                
                                 <th>@lang('app.action')</th>
                             </tr>
                         </thead>
@@ -110,7 +110,7 @@
                 { data: 'logo', name: 'logo' },
                 { data: 'company_name', name: 'company_name' },
                 { data: 'company_email', name: 'company_email' },
-                { data: 'status', name: 'status' },
+               
                 { data: 'action', name: 'action', width: '20%' }
             ]
         });
