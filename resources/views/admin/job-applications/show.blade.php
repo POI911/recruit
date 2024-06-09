@@ -30,7 +30,7 @@
                 @endif
             </p>
             {{--</div>--}}
-            @if($user->cans('edit_job_applications'))
+            {{-- @if($user->cans('edit_job_applications'))
                 <div class="stars stars-example-fontawesome text-center">
                     <select id="example-fontawesome" name="rating" autocomplete="off">
                         <option value=""></option>
@@ -41,7 +41,7 @@
                         <option value="5">5</option>
                     </select>
                 </div>
-            @endif
+            @endif --}}
             @if($application->status->status == 'hired' && is_null($application->onboard))
                 {{-- <p class="text-muted resume-button">
                     <a href="{{ route('admin.job-onboard.create') }}?id={{$application->id}}"

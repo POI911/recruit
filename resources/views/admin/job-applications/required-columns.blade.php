@@ -53,11 +53,11 @@
                     <input class="form-control" type="text" name="city" id="cityId" placeholder="@lang('modules.front.selectCity')" value="{{ !empty($application) ? $application->cover_letter : '' }}">
                 </div>
             </div>
-            <div class="col-md-4">
+            {{-- <div class="col-md-4">
                 <div class="form-group">
                     <input class="form-control" type="number" name="zip_code" id="zipCode" placeholder="@lang('modules.front.zipCode')">
                 </div>
-            </div>
+            </div> --}}
         </div>
     @endif
 @endif

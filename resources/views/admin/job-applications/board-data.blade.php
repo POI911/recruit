@@ -40,7 +40,7 @@
                                                 <img src="{{$application->photo_url}}" alt="user" class="img-circle"
                                                      width="25">
                                                 {{ ucwords($application->full_name) }}</h5>
-                                            <div class="stars stars-example-fontawesome">
+                                            {{-- <div class="stars stars-example-fontawesome">
                                                 <select id="example-fontawesome_{{$application->id}}"
                                                         data-value="{{ $application->rating }}"
                                                         data-id="{{ $application->id }}"
@@ -53,7 +53,7 @@
                                                     <option value="4">4</option>
                                                     <option value="5">5</option>
                                                 </select>
-                                            </div>
+                                            </div> --}}
                                             <h6 class="text-muted">{{ ucwords($application->job->title) }}</h6>
                                             <div class="pt-2 pb-2 mt-3">
                                                 
