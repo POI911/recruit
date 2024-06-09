@@ -81,7 +81,7 @@ class FrontJobApplication extends CoreRequest
             $rules = Arr::add($rules, 'country', 'required|integer|min:1');
             $rules = Arr::add($rules, 'state', 'required|integer|min:1');
             $rules = Arr::add($rules, 'city', 'required');
-            $rules = Arr::add($rules, 'zip_code', 'required|integer');
+           // $rules = Arr::add($rules, 'zip_code', 'required|integer');
         }
 
         $this->get('answer');

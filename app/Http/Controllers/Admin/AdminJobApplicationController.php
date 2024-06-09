@@ -596,7 +596,7 @@ class AdminJobApplicationController extends AdminBaseController
             $jobApplication->country = $this->getName($countriesArray, $request->country);
             $jobApplication->state = $this->getName($statesArray, $request->state);
             $jobApplication->city = $request->city;
-            $jobApplication->zip_code = $request->zip_code;
+            //$jobApplication->zip_code = $request->zip_code;
         }
 
         if ($request->hasFile('photo')) {

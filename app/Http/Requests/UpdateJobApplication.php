@@ -49,7 +49,7 @@ class UpdateJobApplication extends CoreRequest
             $rules = Arr::add($rules, 'country', 'required|integer|min:1');
             $rules = Arr::add($rules, 'state', 'required|integer|min:1');
             $rules = Arr::add($rules, 'city', 'required');
-            $rules = Arr::add($rules, 'zip_code', 'required');
+         //   $rules = Arr::add($rules, 'zip_code', 'required');
         }
 
         if (!is_null($sectionVisibility)) {

@@ -280,7 +280,7 @@ class FrontJobsController extends FrontBaseController
             $jobApplication->country = $this->getName($countriesArray, $request->country);
             $jobApplication->state = $this->getName($statesArray, $request->state);
             $jobApplication->city = $request->city;
-            $jobApplication->zip_code = $request->zip_code;
+           // $jobApplication->zip_code = $request->zip_code;
         }
 
         $jobApplication->cover_letter = $request->cover_letter;
@@ -331,8 +331,8 @@ class FrontJobsController extends FrontBaseController
         if($request->has('apply_type')){
             $linkedin = true;
         }
-        Notification::send($users, new NewJobApplication($jobApplication, $linkedin));
-        Mail::send(new ReceivedApplication($jobApplication, $global));
+      //  Notification::send($users, new NewJobApplication($jobApplication, $linkedin));
+     //   Mail::send(new ReceivedApplication($jobApplication, $global));
 
         return Reply::dataOnly(['status' => 'success', 'msg' => __('modules.front.applySuccessMsg')]);
     }
