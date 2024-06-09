@@ -7,7 +7,7 @@
                     <span class="badge badge-pill badge-primary text-white ml-auto" style="background: {{$column->color}};" id="columnCount_{{$column->id}}">
                         {{ count($column->applications) }}
                     </span>
-                    <span class="pull-right">
+                    {{-- <span class="pull-right">
                         <a data-toggle="dropdown" href="#">
                             <i class="fa fa-ellipsis-h"></i>
                         </a>
@@ -21,7 +21,7 @@
                             </a>
                             @endif
                         </div>
-                    </span>
+                    </span> --}}
                 </h4>
                 <div class="card-text">
                     <div class="panel-body">
