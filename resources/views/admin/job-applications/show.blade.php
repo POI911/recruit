@@ -84,7 +84,7 @@
             </div>
 
             <div class="col-sm-12">
-                <div class="row">
+                {{-- <div class="row">
                     @if (!is_null($application->gender))
                         <div class="col-sm-12 col-md-4">
                             <strong>@lang('app.gender')</strong><br>
@@ -97,10 +97,10 @@
                             <p class="text-muted" id="dob-{{ $application->id }}">{{ $application->dob->format('jS F, Y') }}</p>
                         </div>
                     @endif
-                </div>
+                </div> --}}
             </div>
 
-            @if (!is_null($application->address))
+            {{-- @if (!is_null($application->address))
                         <div class="col-sm-12 col-md-4">
                             <strong>@lang('app.address')</strong><br>
                             <p class="text-muted" id="address-{{ $application->id }}">{{ $application->address}}</p>
@@ -124,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-            @endif
+            @endif --}}
 
             <div class="col-sm-12">
                 <strong>@lang('modules.jobApplication.appliedAt')</strong><br>
